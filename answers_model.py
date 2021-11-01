@@ -14,4 +14,3 @@ qa = ans({
     'context': text2
 })
 
-print(qa) 
