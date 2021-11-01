@@ -13,3 +13,6 @@ A web application to produce questions and answers for reading comprehension pas
 3. `python answers_model.py`
 4. `python answer_app.py` 
 5. Open a browser, and enter `http://127.0.0.1:5000/`
+
+
+### Acknowledgement: Thanks to [Suraj Patil for providing the language model and the pipeline.](https://github.com/patil-suraj/question_generation) 
