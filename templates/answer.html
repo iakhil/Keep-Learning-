@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Keep Learning</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Generate Answers</h1>
+  <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  font-size: 25px; margin-left: 32%; color: yellow;">Get answers to questions formed from a passage.</p>
+
+    <ul>
+
+        <li style="margin-left: 40px;"><a class="active" href="http://127.0.0.1:5000/">Home</a></li>
+        <li style="margin-left: 680px;"><a href="http://127.0.0.1:5000/quest">Question</a></li>
+        <li style="margin-left: 740px;"><a href="http://127.0.0.1:5000/answer">Answer</a></li>
+    </ul>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('answer', formid=1)}}"method="post">
+        <!-- <textarea name="passage" style="min-width: 500px; min-height: 400px; resize: none;" >Enter passage.</textarea>
+        
+        <textarea name="passage" style="min-width: 500px; min-height: 400px; resize: none;" >Enter question.</textarea> -->
+        
+        <textarea style="margin-top:50px; margin-left: 450px; min-width: 1050px; min-height: 622px;"  name="passage" placeholder={{ passage_text }}></textarea>
+        <!-- <input type="text" name="experience" placeholder="Passage" required="required" />  -->
+        <input type="text" name="test_score" placeholder="Question" required="required" />
+		
+    
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Generate</button>
+    </form>
+
+    
+
+   <br>
+   <br>
+   <div style="margin-left: 900px; text-align: center; font-size: 45px; color: rgb(27, 25, 25); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"  >
+    
+      {{ prediction_text}}
+   
+    </div>
+   
+
+ </div>
+
+
+</body>
+</html>
