@@ -5,6 +5,7 @@ A web application to produce questions and answers for reading comprehension pas
 
 1. `pip install flask`
 2. `pip install torch` 
+3. `pip install pickle`
 
 ## How to Run
 1. Clone the repository 
