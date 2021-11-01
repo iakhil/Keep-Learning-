@@ -13,6 +13,6 @@ Saving and loading a general checkpoint model for inference or resuming training
   off on, the latest recorded training loss, external torch.nn.Embedding layers, and more, based on your own algorithm.
 """
 pickle.dump(summarizer, open('model_summ.pkl', 'wb'))
-print(summarizer(text2))
+#print(summarizer(text2))
 model_summ = pickle.load(open('model_summ.pkl', 'rb'))
 # print("Summary: ", model_summ("The sky is blue."))
