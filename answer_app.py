@@ -70,10 +70,10 @@ def quest():
     questions = []
     answers = []
     for i in range(len(preds)):
-        questions.append(preds[i]['question'])
-        answers.append(preds[i]['answer'])
+        questions.append(str(i + 1) + '. ' + preds[i]['question'])
+        answers.append(str(i + 1) + '. ' + preds[i]['answer'])
     sep = ", "
-    return render_template('index.html', prediction_text='Possible questions: {}'.format("\n".join(questions)))
+    return render_template('index.html', prediction_text='{}'.format("\n".join(questions)), answer_text='{}'.format("\n".join(answers)))
 
 if __name__ == "__main__":
     app.run(debug=False)
